@@ -24,7 +24,13 @@ module.exports = function (environment) {
   };
 
   ENV.firebase = {
-    // add firebase config here
+    apiKey: "AIzaSyDHll2K_Erf6g5ICNKxvAWPhrFhDUujIj0",
+    authDomain: "clarustest-e31e1.firebaseapp.com",
+    projectId: "clarustest-e31e1",
+    storageBucket: "clarustest-e31e1.appspot.com",
+    messagingSenderId: "708780330387",
+    appId: "1:708780330387:web:1bc2e60ebcc7980d842c66",
+    measurementId: "G-CJKJ52FJLP"
   };
 
   if (environment === 'test') {
