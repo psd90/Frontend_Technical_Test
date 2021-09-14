@@ -1,6 +1,13 @@
 <div class={{this.styleNamespace}}>
   <MovieListHeader />
 
+
+  <p>Sort By Rating</p>
+  <button  type="button" {{on 'click' this.loadMovies}}>Highest</button>
+  <button  type="button" {{on 'click' this.loadMovies}}>Lowest</button>
+
+
+
   <MovieList @movies={{this.movies}} />
 
   <AddMovieForm @loadMovies={{this.loadMovies}} />

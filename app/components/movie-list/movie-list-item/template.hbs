@@ -4,11 +4,15 @@
       {{this.movie.title}}
     </h2>
     <h3>
-      {{this.movie.rating}}
+       {{#if this.movie.rating}}
+        Movie Rating - (
+        {{this.movie.rating}} / 5 )
+       {{/if}}
     </h3>
 
     <p>
       {{this.movie.description}}
     </p>
+    
   </div>
 </li>

@@ -21,8 +21,9 @@ export default class LandingPage extends Component {
    *
    */
   @tracked movies;
+  
 
-  @action async loadMovies() {
+  @action async loadMovies(event) {
     const db = getFirestore();
     const moviesRef = collection(db, 'movies');
     const moviesSnapshot = await getDocs(moviesRef);
@@ -31,7 +32,14 @@ export default class LandingPage extends Component {
     moviesSnapshot.forEach((doc) => movies.push(doc));
 
     this.movies = movies;
+    if (event.srcElement.innerText === 'Highest') {
+      this.movies.sort((a, b) => b.data().rating - a.data().rating);
+    } else {
+      this.movies.sort((a, b) => a.data().rating - b.data().rating);
+    }
   }
+
+
 
   constructor(owner, args) {
     super(owner, args);
