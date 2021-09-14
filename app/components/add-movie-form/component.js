@@ -7,11 +7,15 @@ import { addDoc, collection, getFirestore } from 'firebase/firestore';
 export default class AddMovieForm extends Component {
   styleNamespace = podNames['add-movie-form'];
 
+  @tracked rating;
+
   @tracked description;
 
   @tracked title;
 
   @tracked errorMessage;
+
+
 
   @action async addMovie(event) {
     event.preventDefault();
@@ -19,13 +23,14 @@ export default class AddMovieForm extends Component {
     this.errorMessage = undefined;
 
     try {
-      const { description, title } = this;
+      const { description, title, rating } = this;
       const db = getFirestore();
 
-      await addDoc(collection(db, 'movies'), { description, title });
+      await addDoc(collection(db, 'movies'), { description, title, rating });
 
       this.description = undefined;
       this.title = undefined;
+      this.rating = undefined;
 
       this.args.loadMovies();
     } catch (error) {

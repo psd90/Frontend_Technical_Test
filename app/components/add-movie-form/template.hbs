@@ -21,6 +21,23 @@
     />
   </label>
 
+
+   <label>
+    Rating
+    <Input
+      @value={{this.rating}}
+      @type='number'
+      class='form-rating'
+      placeholder='Rating (0-5)'
+      min="0"
+      max="5"
+      step=".01"
+      required={{true}}
+    />
+  </label>
+
+
+  
   {{#if this.errorMessage}}
     <div class='error-message'>
       {{this.errorMessage}}
