@@ -2,19 +2,28 @@
   <div class='details'>
     <h2>
       {{this.movie.title}}
+      <button type='button' id='title' {{on 'click' this.edit}}>
+        Edit Title
+      </button>
     </h2>
     <h3>
        {{#if this.movie.rating}}
         Movie Rating - (
         {{this.movie.rating}} / 5 )
        {{/if}}
+       <button type='button' id='rating' {{on 'click' this.edit}}>
+        Edit Rating
+      </button>
     </h3>
 
-    <p>
-      {{this.movie.description}}
-    </p>
+    <h3>
+      About: {{this.movie.description}}
+      <button type='button' id='desc' {{on 'click' this.edit}}>
+        Edit Description
+      </button>
+    </h3>
     
-<button type="button"{{on 'click' this.delete}}> Delete </button>
+<button type="button"{{on 'click' this.delete}}> Delete Movie</button>
 
   </div>
 </li>
