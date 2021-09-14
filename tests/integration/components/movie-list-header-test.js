@@ -9,6 +9,6 @@ module('Integration | Component | movie-list-header', function (hooks) {
   test('has the correct header text', async function (assert) {
     await render(hbs`<MovieListHeader />`);
 
-    assert.dom('h1').hasText('Movies');
+    assert.dom('h1').hasText('My Movies');
   });
 });
