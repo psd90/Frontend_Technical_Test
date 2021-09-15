@@ -1,29 +1,31 @@
 <li class={{this.styleNamespace}}>
   <div class='details'>
-    <h2>
+    <h2 class="title">
       {{this.movie.title}}
-      <button type='button' id='title' {{on 'click' this.edit}}>
+      <button class="edit" type='button' id='title' {{on 'click' this.edit}}>
         Edit Title
       </button>
     </h2>
-    <h3>
+    <h3 class="rating">
        {{#if this.movie.rating}}
         Movie Rating - (
         {{this.movie.rating}} / 5 )
+        {{else}}
+        No Rating
        {{/if}}
-       <button type='button' id='rating' {{on 'click' this.edit}}>
+       <button class="edit" type='button' id='rating' {{on 'click' this.edit}}>
         Edit Rating
       </button>
     </h3>
 
-    <h3>
-      About: {{this.movie.description}}
-      <button type='button' id='desc' {{on 'click' this.edit}}>
+    <h3 class="desc">
+      {{this.movie.description}}
+      <button class="edit" type='button' id='desc' {{on 'click' this.edit}}>
         Edit Description
       </button>
     </h3>
     
-<button type="button"{{on 'click' this.delete}}> Delete Movie</button>
+<button class="delete" type="button"{{on 'click' this.delete}}> Delete Movie</button>
 
   </div>
 </li>

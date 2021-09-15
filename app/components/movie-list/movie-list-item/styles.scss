@@ -3,3 +3,47 @@
     color: #e91c50;
   }
 }
+
+
+.details{
+}
+
+.title{
+  font-size: 3rem;
+  transform: translateY(-.3rem);
+}
+
+.desc{
+  color: #79102a;
+  font-size: 1.5rem;
+  transform: translateY(3.1rem);
+}
+
+.rating{
+  float: right;
+  font-size: 1.5rem;
+  transform: translateY(-7rem) translateX(-2px);
+}
+
+.delete{
+  transform: translateX(661px);
+  color: #e91c50;
+  font-size: 1.3rem;
+  cursor: pointer;
+    &:hover {
+      background-color: #e91c50;
+      color: rgb(255, 255, 255);
+      border: 2px solid red;
+    }
+}
+
+.edit{
+  color: #e91c50;
+  font-size: 1.1rem;
+  cursor: pointer;
+    &:hover {
+      background-color: #e91c50;
+      color: rgb(255, 255, 255);
+      border: 2px solid red;
+    }
+}
